@@ -76,9 +76,9 @@
 		</dependency>
 	</dependencies>
 	<scm>
-        <connection>scm:https://github.com/baikunthar/mediclaim.git</connection>
-        <url>https://github.com/baikunthar/mediclaim.git</url>
-        <developerConnection>scm:git:https://github.com/baikunthar/mediclaim.git</developerConnection>
+        <connection>scm:https://github.com/narayudu/mediclaim.git</connection>
+        <url>https://github.com/narayudu/mediclaim.git</url>
+        <developerConnection>scm:git:https://github.com/narayudu/mediclaim.git</developerConnection>
       <tag>HEAD</tag>
       </scm>
 	<distributionManagement>
