@@ -27,6 +27,7 @@ pipeline {
 	}
 	stage ('Release') {
 		steps {
+			sh 'export JENKINS_NODE_COOKIE=dontkillme ;nohup java -jar $WORKSPACE/Medi Claims/target/*.jar &'
 			sh 'export JENKINS_NODE_COOKIE=dontkillme ;nohup java -jar $WORKSPACE/target/*.jar &'
 		}
 	}
