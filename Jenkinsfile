@@ -3,7 +3,7 @@ pipeline {
 	stages {
       stage('Git Checkout') {
          steps {
-            git 'https://github.com/narayudu/mediclaim.git'
+            git 'https://github.com/baikuntha-git/mediclaim.git'
 		}
 	}
 	stage('Build') {
@@ -27,15 +27,14 @@ pipeline {
 	}
 	stage ('Release') {
 		steps {
-			
-/			sh 'export JENKINS_NODE_COOKIE=dontkillme ;nohup java -jar $WORKSPACE/target/*.jar &'
+			sh 'export JENKINS_NODE_COOKIE=dontkillme ;nohup java -jar $WORKSPACE/target/*.jar &'
 		}
 	}
-/*	stage ('DB Migration') {
+	stage ('DB Migration') {
 		steps {
 			sh '/opt/maven/bin/mvn clean flyway:migrate'
 		}
-	} */
+	}
 }
 	post {
         always {
