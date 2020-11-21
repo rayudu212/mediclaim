@@ -13,6 +13,13 @@ pipeline {
 			}
 		}
 	}
+	stage(junit){
+	  steps{
+	 junit "**target/surefire-reports/.*xml"
+	 archive "target/.*.jar"
+	  }
+	}
+		
 	stage("Quality Gate") {
             steps {
               timeout(time: 2, unit: 'MINUTES') {
