@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: springboot-deployment
+  labels:
+    app: springboot
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        apps: springboot
+    spec:
+      containers:
+      - name: springboot
+        image: narayudu/spring:6
+        ports:
+        - containerPort: 8081
