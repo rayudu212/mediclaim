@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: springboot
+  labels:
+    app: springboot
+spec:
+  containers:
+    - name: springboot
+      image: narayudu/spring:6
+      ports:
+        - containerPort: 8081
