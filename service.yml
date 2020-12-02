@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: springboot
+spec:
+  selector:
+    app: springboot
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8081
+  type: LoadBalancer   
