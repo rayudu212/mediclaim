@@ -1,18 +1,37 @@
-apiVersion: apps/v1beta1
+---
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-deployment
-  labels:
-    app: springboot
+  name: mediclaim
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: mediclaim
   template:
     metadata:
+      name: mediclaim
       labels:
-        apps: springboot
+        app: mediclaim
     spec:
       containers:
-      - name: springboot
+      - name: hello-whale-container
         image: narayudu/spring:6
+        imagePullPolicy: Always
         ports:
         - containerPort: 8081
+---
+apiVersion: v1
+kind: Service 
+metadata:
+  name: mediclaim-svc
+  labels:
+    app: mediclaim
+spec:
+  selector:
+    app: mediclaim
+  type: NodePort
+  ports:
+  - nodePort: 31113
+    port: 80
+    targetPort: 8081
