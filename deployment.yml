@@ -1,19 +1,16 @@
 ---
+kind: Service
 apiVersion: v1
-kind: Service 
 metadata:
-  name: mediclaim-svc
-  labels:
-    app: mediclaim
+  name: spring
 spec:
   selector:
-    app: mediclaim
-  type: NodePort
+    app: spring
   ports:
-  - nodePort: 31113
+  - protocol: TCP
     port: 80
     targetPort: 8081
-
+  type: LoadBalancer  
 ---
 apiVersion: apps/v1
 kind: Deployment
