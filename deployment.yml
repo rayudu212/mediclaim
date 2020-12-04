@@ -11,8 +11,8 @@ spec:
   type: NodePort
   ports:
   - nodePort: 31113
-    port: 8081
-    targetPort: 8081 
+    port: 80
+    targetPort: 80
 ---
 apiVersion: apps/v1
 kind: Deployment
