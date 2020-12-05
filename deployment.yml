@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: mediclaim
-        image: narayudu/spring
+        image: narayudu/spring:$BUILD_NUMBER
         imagePullPolicy: Always
         ports:
         - containerPort: 8182
