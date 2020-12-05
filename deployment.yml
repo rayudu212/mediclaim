@@ -12,7 +12,7 @@ spec:
   ports:
   - nodePort: 31113
     port: 80
-    targetPort: 8081
+    targetPort: 8182
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: mediclaim
-        image: narayudu/spring:6
+        image: narayudu/spring:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8081
+        - containerPort: 8182
