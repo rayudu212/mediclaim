@@ -22,7 +22,7 @@ pipeline {
             }
           }
 		
-#	stage('Publish Jacoco Test Coverage Report') {
+	stage('Publish Jacoco Test Coverage Report') {
          steps {
             jacoco()
             }
