@@ -21,13 +21,7 @@ pipeline {
               }
             }
           }
-		
-	stage('Publish Jacoco Test Coverage Report') {
-         steps {
-            jacoco()
-            }
-	}
-		
+			
 		
 	stage ('Deploy') {
 		steps {
